@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.automagia.autoShop.UserController">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #030307;" stylesheets="@style.css">
+         <children>
+            <Pane layoutX="681.0" prefHeight="53.0" prefWidth="119.0" />
+            <VBox layoutY="94.0" prefHeight="344.0" prefWidth="800.0" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane prefHeight="346.0" prefWidth="800.0" style="-fx-background-color: white;">
+                     <children>
+                        <ComboBox fx:id="listFreeOrdersDropBlock" layoutX="29.0" layoutY="97.0" prefHeight="31.0" prefWidth="368.0" styleClass="list__orders" />
+                        <Pane layoutX="29.0" layoutY="140.0" prefHeight="188.0" prefWidth="368.0" style="-fx-background-color: grey;">
+                           <children>
+                              <Label fx:id="labelOrderId" layoutX="8.0" layoutY="44.0" textFill="#030303">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelOrderTitle" layoutX="22.0" layoutY="45.0" prefHeight="18.0" prefWidth="325.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelOrderDescription" alignment="TOP_LEFT" layoutX="22.0" layoutY="72.0" prefHeight="40.0" prefWidth="325.0" textFill="WHITE" textOverrun="CLIP" wrapText="true" />
+                              <Label fx:id="labelOrderStatus" alignment="BOTTOM_RIGHT" layoutX="252.0" layoutY="110.0" prefHeight="16.0" prefWidth="95.0" textFill="WHITE" />
+                              <Label fx:id="labelFreeUser" layoutX="136.0" layoutY="79.0" prefHeight="31.0" prefWidth="110.0" text="Нет задачи">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Label id="userLoginnedLabel" fx:id="userLoginnedLabel" layoutX="29.0" layoutY="23.0" text="Приветствую, user!">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Pane fx:id="buttonsBlock" layoutX="415.0" layoutY="149.0" prefHeight="178.0" prefWidth="368.0" style="-fx-background-color: white;">
+                           <children>
+                              <Button fx:id="acceptOrderButton" layoutX="14.0" layoutY="97.0" mnemonicParsing="false" onAction="#acceptOrderAction" prefHeight="30.0" prefWidth="340.0" styleClass="admin-panel__button" text="Принять задачу" />
+                              <Button fx:id="rejectOrderButton" layoutX="14.0" layoutY="55.0" mnemonicParsing="false" onAction="#rejectOrderAction" prefHeight="30.0" prefWidth="340.0" styleClass="admin-panel__button" text="Отказаться от задачи" textFill="#1b1a1a" />
+                              <Button fx:id="completeOrderButton" layoutX="14.0" layoutY="138.0" mnemonicParsing="false" onAction="#completeOrderAction" prefHeight="30.0" prefWidth="340.0" styleClass="admin-panel__button" text="Задача выполнена" textFill="#111111" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="29.0" layoutY="58.0" text="Свободные задачи">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="340.0" layoutX="430.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/logo.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children></VBox>
+            <Button id="logoutButton" fx:id="logoutUserButton" layoutX="693.0" layoutY="452.0" mnemonicParsing="false" onAction="#logoutUserFromDashboard" prefHeight="40.0" prefWidth="95.0" styleClass="button__logout" text="Выход">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="353.0" layoutY="38.0" text="Заказы" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
